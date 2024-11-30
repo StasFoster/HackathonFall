@@ -15,6 +15,9 @@ namespace Hackathon.Models
 
         [Display(Name = " ")]
         public string Password { get; set; }
+
+        [Display(Name = " ")]
+        public string Message { get; set; }
     }
 
 }
