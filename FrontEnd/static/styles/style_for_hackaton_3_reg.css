@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+    font-family:  'Tenor Sans', sans-serif;
+    background-image: url('../images/macos-big-sur-1920-x-1080-background-uz3cwmapsoshabju.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.naidy_nekkitu{
+    display: flex;
+    background-color: rgb(57, 56, 56);
+    align-items: center;
+}
+
+.name_sait{
+    display: flex;
+    align-items: center;
+}
+
+.center{
+    border-radius: 50px;
+    min-height: 500px;
+    min-width: 400px;
+    background-color: rgb(30, 30, 30);
+}
+
+input{
+    border-radius: 10px;
+    height: 20px;
+    background-color: rgb(57, 56, 56) ;
+    color: azure;
+    border:  rgb(30, 30, 30) ;
+}
+
+.registry{
+    margin-top: 20px;
+}
+
+.name{
+    padding: 30px;
+}
+
+.surname{
+    padding: 30px;
+}
+
+.username{
+    padding: 30px;
+}
+
+.password{
+    padding: 30px;
+}
+
+.button{
+    padding: 30px;
+}
+
+.button1{
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(165, 0, 0);
+}
+
+
+.name_sait>h2{
+    margin-left: 50px;
+    padding: 15px;
+    font-weight: lighter;
+    color:azure;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: azure;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.registration>a{
+    color: azure;
+    text-decoration: none;
+}
+
+.search-container:focus-within {
+    background-color:  rgb(25, 25, 25);
+    box-shadow: 0 0 0 2px  rgb(25, 25, 25);
+}
+
+@keyframes searchAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Показываем меню при наведении */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Стилизация при наведении */
+select:hover {
+    border-color: #999;
+}
+
+/* Стилизация при фокусе */
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+/* Стилизация опций внутри селектора */
+select option {
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Если селектор находится в контейнере с фиксированной шириной */
+.container select,
+.form-group select {
+    width: 100%;
+    max-width: 100%;
+}

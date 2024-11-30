@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    background-image: url('../images/macos-big-sur-1920-x-1080-background-uz3cwmapsoshabju.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.apple-nav {
+    background-color: rgb(25, 25, 25);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    z-index: 9999;
+}
+
+.upts{
+    color: azure;
+    text-decoration: none;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+.nav-search {
+    margin: 0 20px;
+    flex: 0 1 300px;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: background-color 0.2s;
+}
+
+.search-container:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.search-container input {
+    background: none;
+    border: none;
+    color: #f5f5f7;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding-right: 10px;
+}
+
+.search-container input::placeholder {
+    color: #86868b;
+}
+
+.nav-links {
+    display: flex;
+    align-items:center;
+    height: 100%;
+    margin-left: 20px;
+    flex: 1;
+    justify-content:space-around;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item > a {
+    color:azure;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0 20px;
+    opacity: 0.8;
+    transition: all 0.2s;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(25, 25, 25);
+    backdrop-filter: saturate(180%) blur(20px);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border-radius: 0px;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bolder;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-item:hover > a {
+    opacity: 1;
+    color:azure;
+}
+
+.apple-nav::after {
+    content: '';
+    position:absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: transparent;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: azure;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.search-container:focus-within {
+    background-color:  rgb(25, 25, 25);
+    box-shadow: 0 0 0 2px  rgb(25, 25, 25);
+}
+
+@keyframes searchAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-search {
+    animation: searchAppear 0.3s ease-out;
+}
+
+.navbar {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Контейнер для содержимого меню */
+.dropdown-content .menu-container {
+    max-width: var(--max-width, 1200px); /* Используем переменную или конкретное значение */
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Показываем меню при наведении */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Стилизация при наведении */
+select:hover {
+    border-color: #999;
+}
+
+/* Стилизация при фокусе */
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+/* Стилизация опций внутри селектора */
+select option {
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Если селектор находится в контейнере с фиксированной шириной */
+.container select,
+.form-group select {
+    width: 100%;
+    max-width: 100%;
+}
