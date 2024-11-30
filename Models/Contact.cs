@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hackathon.Models
 {
@@ -19,6 +21,6 @@ namespace Hackathon.Models
         [Display(Name = " ")]
         public string Message { get; set; }
     }
-
+   
 }
 

@@ -1,6 +1,10 @@
 ﻿using Hackathon.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.IO;
+using System;
+using System.Text.Json;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Hackathon.Controllers
 {
@@ -12,7 +16,9 @@ namespace Hackathon.Controllers
         {
             return View();
         }
+        
 
+        
         [HttpPost]
         public IActionResult Check(Contact contact)
         {
@@ -21,11 +27,19 @@ namespace Hackathon.Controllers
                 contacts.Add(contact);
 
                 // Запись списка контактов в файл
-                using (StreamWriter sw = new StreamWriter("contacts.txt", true))
+                using (StreamWriter sw = new StreamWriter("mainUser.json", true))
                 {
                     foreach (var c in contacts)
                     {
-                        sw.WriteLine($"{c.Name},{c.SurName},{c.Login},{c.Password},{c.Message}");
+                        Contact a  = new Contact {
+                            Name = c.Name,
+                            SurName = c.SurName,
+                            Login = c.Login,
+                            Password = c.Password,
+                            Message = c.Message,
+                        };
+                        string json = JsonSerializer.Serialize(a);
+                        sw.WriteLine(json);
                     }
                 }
 
@@ -34,6 +48,7 @@ namespace Hackathon.Controllers
 
             return View("Index");
         }
+        
 
         public IActionResult Good()
         {
