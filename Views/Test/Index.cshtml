@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model Test
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -10,336 +11,367 @@
 </head>
 
 <body>
-    
-    
+    <form asp-action="Save" asp-controller="Test">
     <main>
         <div class="hero">
             <div class="questions">
                 <div class="question1">
-                    <h3 class="text_1">1. Чем вы предпочитаете заниматься в свободное время?</h3>
+                    <h3 class="text_1">1.Я интересуюсь научными открытиями и технологическими новинками.</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Спорт и активный отдых</label>
+                                <input id="sport" type="radio" name="Answers[0]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Искусство</label>
+                                <input id="iskusstvo" type="radio" name="Answers[0]" value="скорее нет чем да">
+                            <label for="iskusstvo">скорее нет чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Технологии (IT, гаджеты, игры)</label>
+                                <input id="technology" type="radio" name="Answers[0]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Путешествия и природа</label>
+                                <input id="travel" type="radio" name="Answers[0]" value="скорее да чем нет">
+                            <label for="travel">скорее да чем нет</label>
                         </div>
                         <div class="answer4">
-                            <input id="liter" type="radio" name="question">
-                            <label for="liter">Литература, чтение научных статей</label>
+                                <input id="liter" type="radio" name="Answers[0]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question2">
-                    <h3 class="text_1">2. Какую обстановку вы предпочитаете?(выбрать один вариант)</h3>
+                    <h3 class="text_1">2.Мне нравится обсуждать общественные и политические вопросы.</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Многолюдные и шумные места</label>
+                                <input id="sport" type="radio" name="Answers[1]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Спокойные и уединённые пространства</label>
+                                <input id="iskusstvo" type="radio" name="Answers[1]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Места с балансом тишины и активности</label>
+                                <input id="technology" type="radio" name="Answers[1]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Открытые природные пространства</label>
+                                <input id="travel" type="radio" name="Answers[1]" value="скорее да, чем не">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[1]" value="да">>
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question3">
-                    <h3 class="text_1">3. Что для вас важнее всего в общении с другими?(выбрать один вариант)</h3>
+                    <h3 class="text_1">3.Искусство и культура занимают важное место в моей жизни.</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Поддержка и эмпатия</label>
+                                <input id="sport" type="radio" name="Answers[2]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Интересные дискуссии и обмен идеями</label>
+                                <input id="iskusstvo" type="radio" name="Answers[2]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Общие цели и командная работа</label>
+                                <input id="technology" type="radio" name="Answers[2]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Весёлое и непринуждённое времяпрепровождение</label>
+                                <input id="travel" type="radio" name="Answers[2]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[2]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question4">
-                    <h3 class="text_1">4. Как вы предпочитаете проводить выходные?(выбрать один вариант)</h3>
+                    <h3 class="text_1">4.Я считаю, что важно помогать другим людям</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">С друзьями или семьёй</label>
+                                <input id="sport" type="radio" name="Answers[3]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Занимаясь любимым хобби</label>
+                                <input id="iskusstvo" type="radio" name="Answers[3]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">В путешествиях или походах</label>
+                                <input id="technology" type="radio" name="Answers[3]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Дома, отдыхая в одиночестве</label>
+                                <input id="travel" type="radio" name="Answers[3]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[3]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question5">
-                    <h3 class="text_1">5. Как вы относитесь к неожиданным переменам?(выбрать один вариант)</h3>
+                    <h3 class="text_1">5.Я охотно пробую новые виды хобби или деятельности</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Стараюсь избегать</label>
+                                <input id="sport" type="radio" name="Answers[4]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Принимаю, но с осторожностью</label>
+                                <input id="iskusstvo" type="radio" name="Answers[4]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Вижу их как вызов и возможность</label>
+                                <input id="technology" type="radio" name="Answers[4]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Абсолютно спокойно</label>
+                                <input id="travel" type="radio" name="Answers[4]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[4]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question6">
-                    <h3 class="text_1">6. Что вам больше всего нравится в людях?(выбрать один вариант)</h3>
+                    <h3 class="text_1">6.Я предпочитаю активный отдых на природе, а не времяпровождение дома</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Искренность и открытость</label>
+                                <input id="sport" type="radio" name="Answers[5]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo"> Интеллект и логическое мышление</label>
+                                <input id="iskusstvo" type="radio" name="Answers[5]" value="скорее нет, чем да">
+                            <label for="iskusstvo"> скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Креативность и нестандартное мышление</label>
+                                <input id="technology" type="radio" name="Answers[5]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Умение поддерживать и вдохновлять</label>
+                                <input id="travel" type="radio" name="Answers[5]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[5]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question7">
-                    <h3 class="text_1">7. Как вы подходите к решению проблем?(выбрать один вариант)</h3>
+                    <h3 class="text_1">7.Я ценю традиционные семейные ценности и устои</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Анализирую ситуацию и нахожу рациональное решение</label>
+                                <input id="sport" type="radio" name="Answers[6]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Пробую разные подходы и импровизирую</label>
+                                <input id="iskusstvo" type="radio" name="Answers[6]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Консультируюсь с другими и принимаю совместное решение</label>
+                                <input id="technology" type="radio" name="Answers[6]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Следую интуиции</label>
+                                <input id="travel" type="radio" name="Answers[6]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[6]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question8">
-                    <h3 class="text_1">8. Как вы выбираете книги, фильмы или музыку?(выбрать один варинт)</h3>
+                    <h3 class="text_1">8.Меня вдохновляют успехи других людей</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Ориентируюсь на рекомендации друзей или экспертов</label>
+                                <input id="sport" type="radio" name="Answers[7]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Выбираю, исходя из собственных интересов и вкусов</label>
+                                <input id="iskusstvo" type="radio" name="Answers[7]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Пробую что-то новое, чтобы расширить кругозор</label>
+                                <input id="technology" type="radio" name="Answers[7]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Часто возвращаюсь к уже знакомым и любимым произведениям</label>
+                                <input id="travel" type="radio" name="Answers[7]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[7]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question9">
-                    <h3 class="text_1">9. Какая форма общения вам комфортнее всего?(выбрать один вариант)</h3>
+                    <h3 class="text_1">9.Я считаю, что самореализация важнее материального достатка</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Личное общение</label>
+                                <input id="sport" type="radio" name="Answers[8]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Общение в мессенджерах или соцсетях</label>
+                                <input id="iskusstvo" type="radio" name="Answers[8]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Голосовые или видеозвонки</label>
+                                <input id="technology" type="radio" name="Answers[8]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Письма или текстовые обсуждения</label>
+                                <input id="travel" type="radio" name="Answers[8]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[8]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question10">
-                    <h3 class="text_1">10. Как вы относитесь к спорным темам и дискуссиям?(выбрать один вариант)</h3>
+                    <h3 class="text_1">10.Мне нравится изучать философские или духовные вопросы</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Участвую активно и с удовольствием</label>
+                                <input id="sport" type="radio" name="Answers[9]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Занимаю нейтральную позицию, слушаю больше, чем говорю</label>
+                                <input id="iskusstvo" type="radio" name="Answers[9]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Избегаю острых обсуждений</label>
+                                <input id="technology" type="radio" name="Answers[9]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Использую их как способ лучше понять других и их точку зрения</label>
+                                <input id="travel" type="radio" name="Answers[9]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[9]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question11">
-                    <h3 class="text_1">11. Какие научные или профессиональные области вам наиболее интересны?(выбрать до трех ответов)</h3>
+                    <h3 class="text_1">11.Я готов участвовать в решении глобальных проблем, таких как изменение климата</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Технологии и программирование</label>
+                                <input id="sport" type="radio" name="Answers[10]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Искусство и дизайн</label>
+                                <input id="iskusstvo" type="radio" name="Answers[10]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Медицина и биология</label>
+                                <input id="technology" type="radio" name="Answers[10]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Физика и математика</label>
+                                <input id="travel" type="radio" name="Answers[10]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
                         </div>
                         <div class="answer4">
-                            <input id="liter" type="radio" name="question">
-                            <label for="liter">Экономика и финансы</label>
-                        </div>
-                        <div class="answer5">
-                            <input id="economic" type="radio" name="question">
-                            <label for="economic">Образование и психология</label>
-                        </div>
-                        <div class="answer6">
-                            <input id="edu" type="radio" name="question">
-                            <label for="edu">Экология и природные науки</label>
+                                <input id="liter" type="radio" name="Answers[10]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question12">
-                    <h3 class="text_1">12. Какие задачи вам больше всего нравится решать?(выбрать один вариант)</h3>
+                    <h3 class="text_1">12.Я чувствую потребность быть в курсе всех текущих новостей и событий</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Аналитические задачи, требующие логики и точных расчетов</label>
+                                <input id="sport" type="radio" name="Answers[11]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Творческие задачи, где важен нестандартный подход</label>
+                                <input id="iskusstvo" type="radio" name="Answers[11]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Практические задачи, направленные на улучшение окружающего мира</label>
+                                <input id="technology" type="radio" name="Answers[11]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Межличностные задачи, связанные с коммуникацией и управлением людьми</label>
+                                <input id="travel" type="radio" name="Answers[11]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[11]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question13">
-                    <h3 class="text_1">13. Какой формат работы для вас наиболее комфортен?(выбрать один вариант ответа)</h3>
+                    <h3 class="text_1">13.Мне комфортно делиться своими личными взглядами и убеждениями с другими</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="sport" type="radio" name="question">
-                            <label for="yes">Работа в команде, разделяя задачи</label>
+                                <input id="sport" type="radio" name="Answers[12]" value="нет">
+                            <label for="yes">нет</label>
                         </div>
                         <div class="answer1">
-                            <input id="iskusstvo" type="radio" name="question">
-                            <label for="iskusstvo">Индивидуальная работа, с полной свободой действий</label>
+                                <input id="iskusstvo" type="radio" name="Answers[12]" value="скорее нет, чем да">
+                            <label for="iskusstvo">скорее нет, чем да</label>
                         </div>
                         <div class="answer2">
-                            <input id="technology" type="radio" name="question">
-                            <label for="technology">Руководство проектом или координация других</label>
+                                <input id="technology" type="radio" name="Answers[12]" value="нейтрально">
+                            <label for="technology">нейтрально</label>
                         </div>
                         <div class="answer3">
-                            <input id="travel" type="radio" name="question">
-                            <label for="travel">Консультирование и поддержка других</label>
+                                <input id="travel" type="radio" name="Answers[12]" value="скорее да, чем нет">
+                            <label for="travel">скорее да, чем нет</label>
+                        </div>
+                        <div class="answer4">
+                                <input id="liter" type="radio" name="Answers[12]" value="да">
+                            <label for="liter">да</label>
                         </div>
                     </div>
                 </div>
 
                 <div class="question14">
-                    <h3 class="text_1">14. Хотели бы вы общаться с людьми, которые имеют взгляды или интересы, отличные от ваших?</h3>
+                    <h3 class="text_1">14.Хотели бы вы общаться с людьми противоположных взглядов?</h3>
                     <div class="radiobuttons">
                         <div class="answer">
-                            <input id="yes" type="radio" name="question">
+                                <input id="yes" type="radio" name="Answers[13]" value="да">
                             <label for="yes">да</label>
                         </div>
                         <div class="answer1">
-                            <input id="no" type="radio" name="question">
+                                <input id="no" type="radio" name="Answers[13]" value="нет">
                             <label for="no">нет</label>
                         </div>
                     </div>
                 </div>
-                <div class="button">
-                    <input class="button1"
-                           type="submit"
-                           value="ОТПРАВИТЬ"
-                           disabled>
-
-
-                </div>
             </div>
+
+            <input type="submit" value="Сохранить" />
+        </div>
     </main>
+    </form>
 </body>
 
 </html>

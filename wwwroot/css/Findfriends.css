@@ -1,0 +1,250 @@
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    color: azure;
+}
+
+    .hero h1 {
+        font-size: 50px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+        font-size: 24px;
+        font-weight: 400;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+.center {
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(23, 23, 23, 0.461);
+    border-radius: 50px;
+    padding: 30px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 30px;
+}
+
+.info {
+    flex: 0 0 300px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    color: azure;
+}
+
+    .profile-info h3 {
+        margin-bottom: 15px;
+    }
+
+    .profile-info p {
+        margin-bottom: 10px;
+    }
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.func {
+    background-color: rgb(59, 58, 58);
+    border-radius: 40px;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+    .func button {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgb(151, 0, 0);
+        color: azure;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s;
+    }
+
+        .func button:hover {
+            background-color: azure;
+            color: rgb(165, 0, 0);
+        }
+
+.friends {
+    background-color: rgb(41, 41, 41);
+    border-radius: 40px;
+    padding: 20px;
+    flex: 1;
+}
+
+    .friends h3 {
+        color: azure;
+        margin-bottom: 15px;
+    }
+
+.friends-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(57, 56, 56);
+    border-radius: 20px;
+}
+
+.friend-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.friend-name {
+    color: azure;
+}
+
+.search-container:focus-within {
+    background-color: rgb(25, 25, 25);
+    box-shadow: 0 0 0 2px rgb(25, 25, 25);
+}
+
+@keyframes searchAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+
+    select:hover {
+        border-color: #999;
+    }
+
+
+    select:focus {
+        outline: none;
+        border-color: #4CAF50;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+    }
+
+
+    select option {
+        padding: 10px;
+        background-color: #fff;
+    }
+
+
+.container select,
+.form-group select {
+    width: 100%;
+    max-width: 100%;
+}
+
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.username-block {
+    color: azure;
+    margin-bottom: 15px;
+}
+
+    .username-block h3 {
+        margin: 0;
+    }
+
+.about-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(57, 56, 56);
+    border-radius: 20px;
+}
+
+    .about-block p {
+        color: azure;
+        margin: 0;
+    }
+
+.about-me {
+    background-color: rgb(41, 41, 41);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+    .about-me h3 {
+        color: azure;
+        margin-bottom: 15px;
+    }
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(57, 56, 56);
+    border-radius: 20px;
+}
+
+    .about-content p {
+        color: azure;
+        line-height: 1.4;
+        margin: 0;
+    }

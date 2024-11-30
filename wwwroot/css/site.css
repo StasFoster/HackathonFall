@@ -1,7 +1,18 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+    font-family: 'Tenor Sans', sans-serif;
+    background-image: url(' https://i.pinimg.com/originals/f7/b7/d0/f7b7d0c615b861b9c487a0c373daf474.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 .naidy_nekkitu {
     display: flex;

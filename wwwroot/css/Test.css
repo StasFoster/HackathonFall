@@ -1,21 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
-    font-family: 'Tenor Sans', sans-serif;
-    background-image: url('../images/macos-big-sur-1920-x-1080-background-uz3cwmapsoshabju.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-
 
 .questions {
     border-radius: 50px;
