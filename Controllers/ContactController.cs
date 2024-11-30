@@ -25,7 +25,7 @@ namespace Hackathon.Controllers
                 {
                     foreach (var c in contacts)
                     {
-                        sw.WriteLine($"{c.Name},{c.SurName},{c.Login},{c.Password}");
+                        sw.WriteLine($"{c.Name},{c.SurName},{c.Login},{c.Password},{c.Message}");
                     }
                 }
 
