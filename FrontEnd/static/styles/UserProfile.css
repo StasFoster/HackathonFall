@@ -57,7 +57,7 @@ body {
 }
 
 .center {
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     background-color: rgba(23, 23, 23, 0.461);
     border-radius: 50px;
@@ -110,7 +110,7 @@ body {
 }
 
 .func {
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(59, 58, 58);
     border-radius: 40px;
     padding: 20px;
     display: flex;
@@ -121,14 +121,16 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
-    background-color: rgb(57, 56, 56);
+    background-color: rgb(151, 0, 0);
     color: azure;
     cursor: pointer;
+    font-size: 20px;
     transition: background-color 0.3s;
 }
 
 .func button:hover {
-    background-color: rgb(75, 74, 74);
+    background-color:azure;
+    color:  rgb(165, 0, 0) ;
 }
 
 .friends {
@@ -221,6 +223,64 @@ select option {
 .form-group select {
     width: 100%;
     max-width: 100%;
+}
+
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.username-block {
+    color: azure;
+    margin-bottom: 15px;
+}
+
+.username-block h3 {
+    margin: 0;
+}
+
+.about-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(57, 56, 56);
+    border-radius: 20px;
+}
+
+.about-block p {
+    color: azure;
+    margin: 0;
+}
+
+.about-me {
+    background-color: rgb(41, 41, 41);
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.about-me h3 {
+    color: azure;
+    margin-bottom: 15px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(57, 56, 56);
+    border-radius: 20px;
+}
+
+.about-content p {
+    color: azure;
+    line-height: 1.4;
+    margin: 0;
 }
 
 
