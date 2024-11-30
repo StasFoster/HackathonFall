@@ -11,7 +11,7 @@ body {
 
 .center {
     border-radius: 50px;
-    min-height: 500px;
+    min-height: 600px;
     min-width: 400px;
     background-color: rgb(30, 30, 30);
 }
@@ -29,23 +29,27 @@ input {
 }
 
 .name {
-    padding: 30px;
+    padding: 20px;
 }
 
 .surname {
-    padding: 30px;
+    padding: 20px;
 }
 
 .username {
-    padding: 30px;
+    padding: 20px;
 }
 
 .password {
-    padding: 30px;
+    padding: 20px;
+}
+
+.message {
+    padding: 20px;
 }
 
 .button {
-    padding: 30px;
+    padding: 20px;
 }
 
 .button1 {
