@@ -1,0 +1,166 @@
+
+
+body {
+    @import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+    font-family: 'Tenor Sans', sans-serif;
+    background-image: url('https://cdn1.ozone.ru/s3/multimedia-3/6450619707.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+
+.info {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.info2 {
+    max-width: 600px;
+}
+
+    .info2 > h4 {
+        font-size: larger;
+        line-height: 30px;
+        font-weight: lighter;
+    }
+
+.center {
+    border-radius: 15px;
+    padding: 200px;
+}
+
+.reg {
+    text-align: center;
+    border-radius: 40px;
+    padding: 20px;
+    background-color: rgb(165, 0, 0);
+}
+
+.in {
+    border-radius: 40px;
+    border: medium solid azure;
+    padding: 20px;
+    background-color: rgba(40, 40, 40, 0.415);
+}
+
+    .in:hover {
+        background-color: azure;
+    }
+
+.reg:hover {
+    background-color: azure;
+}
+
+.slova:hover {
+    color: rgb(165, 0, 0);
+}
+
+.in:hover a {
+    color: rgb(26, 26, 26);
+}
+
+.slova > a {
+    text-decoration: none;
+    color: azure;
+}
+
+.slova {
+    margin-top: 3px;
+}
+
+.in > a {
+    text-decoration: none;
+    color: azure;
+}
+
+.registration {
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: azure;
+}
+
+    .hero h1 {
+        font-size: 50px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+        font-size: 24px;
+        font-weight: 400;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+.registration > a {
+    color: azure;
+    text-decoration: none;
+}
+
+.search-container:focus-within {
+    background-color: rgb(25, 25, 25);
+    box-shadow: 0 0 0 2px rgb(25, 25, 25);
+}
+
+@keyframes searchAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Показываем меню при наведении */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+    /* Стилизация при наведении */
+    select:hover {
+        border-color: #999;
+    }
+
+    /* Стилизация при фокусе */
+    select:focus {
+        outline: none;
+        border-color: #4CAF50;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+    }
+
+    /* Стилизация опций внутри селектора */
+    select option {
+        padding: 10px;
+        background-color: #fff;
+    }
+
+/* Если селектор находится в контейнере с фиксированной шириной */
+.container select,
+.form-group select {
+    width: 100%;
+    max-width: 100%;
+}

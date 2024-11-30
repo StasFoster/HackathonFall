@@ -1,0 +1,51 @@
+﻿@model Hackathon.Models.Contact
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт для Никиты</title>
+    <link rel="stylesheet" href="static/styles/style_for_hackaton_3_reg.css">
+    <link rel="stylesheet" href="~/css/Contacts.css" asp-append-version="true" />
+</head>
+
+<body>
+    <main>
+        <div class="hero">
+            <div class="center">
+                <div class="registry">
+                    <h2> РЕГИСТРАЦИЯ </h2>
+                </div>
+                <div class="poloska">
+                    <h2 class="chertochka">____</h2>
+                </div>
+                <form asp-action="Check">
+                    <div class="name">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" placeholder="  введи имя">
+                    </div>
+                    <div class="surname">
+                        <label asp-for="SurName"></label>
+                        <input asp-for="SurName" placeholder="  введи фамилию">
+                    </div>
+                    <div class="username">
+                        <label asp-for="Login"></label>
+                        <input asp-for="Login" placeholder="  придумай логин">
+                    </div>
+                    <div class="password">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" placeholder="  придумай пароль" type="password">
+                    </div>
+                    <div class="button">
+                        <input class="button1" type="submit"  value="ОТПРАВИТЬ">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

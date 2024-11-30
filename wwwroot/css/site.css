@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.naidy_nekkitu {
+    display: flex;
+    background-color: rgb(57, 56, 56);
+    align-items: center;
+}
+
+.name_sait {
+    display: flex;
+    align-items: center;
+}
+.naidy_nekkitu {
+    display: flex;
+    background-color: rgb(57, 56, 56);
+    align-items: center;
+}
+
+.name_sait > h2 {
+    margin-left: 50px;
+    padding: 15px;
+    font-weight: lighter;
+    color: azure;
+}
